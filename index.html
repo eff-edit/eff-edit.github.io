@@ -9,7 +9,7 @@
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image" content="static/images/banner.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
@@ -52,28 +52,39 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">EEdit⚡: Rethinking the Spatial and Temporal Redundancy for Efficient Image Editing</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author YZX</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Zexuan Yan</a><sup>1,2</sup>,</span>
+              <span class="author-block">
+                <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Yue Ma</a><sup>3</sup>,</span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Chang Zou</a><sup>1</sup>,</span>
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Wenteng Chen</a><sup>1</sup>,</span>
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Qifeng Chen</a><sup>3</sup>,</span>
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Linfeng Zhang</a><sup>1</sup></span>
+              </span>
+                </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">SJTU <sup>1</sup>,</span>
+                    <span class="author-block">HKUST <sup>3</sup>,</span>
+                    <span class="author-block">USTC <sup>2</sup></span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="static\pdfs\ICCV_2025_4183_v5.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -84,7 +95,7 @@
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="static\pdfs\ICCV_2025_4183_supp.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -105,13 +116,13 @@
                 </span>
 
                 <!-- ArXiv abstract Link -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>arXiv</span> -->
                 </a>
               </span>
             </div>
@@ -127,13 +138,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+      <img src="static/images/teaser.png" alt="Teaser image" class="teaser-image">
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        <strong>Gallery of various editing tasks and efficiency comparisons.</strong> <br> We propose the EEdit, an inversion-based framework for efficient image editing. Compare with previous methods, we achieve the faster and more efficient image editing.
       </h2>
     </div>
   </div>
@@ -148,7 +155,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Inversion-based image editing is rapidly gaining momentum while suffering from significant computation overhead, 
+            hindering its application in real-time interactive scenarios. 
+            In this paper, we rethink that the redundancy in inversion-based image editing exists in both the spatial and temporal 
+            dimensions, such as the unnecessary computation in unedited regions and the redundancy in the inversion 
+            progress. To tackle these challenges, we propose a practical framework, named EEdit, to achieve efficient image 
+            editing. Specifically, we introduce three techniques to solve them one by one. For spatial redundancy, spatial locality 
+            caching is introduced to compute the edited region and its neighboring regions while skipping the unedited regions, 
+            and token indexing preprocessing is designed to further accelerate the caching. For temporal redundancy, inversion 
+            step skipping is proposed to reuse the latent for efficient editing. Our experiments demonstrate an average of 2.46X 
+            acceleration without performance drop in a wide range of editing tasks including prompt-guided image editing, dragging 
+            and image composition.
           </p>
         </div>
       </div>
@@ -157,43 +174,91 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+<!-- Methods -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Methods</h2>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+      <!-- Your video here -->
+      <!-- <source src="static/videos/banner_video.mp4" type="video/mp4" /> -->
+      <!-- </video> -->
+      <img src="static\images\pipeline.png" alt="MY ALT TEXT">
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        <strong>The overview of our approach.</strong> 
+        The proposed framework for image editing based on MM-DiT diffusion models employs 
+        an efficient denoising and training-free approach.
+         The pipeline takes the original image and an editing prompt as inputs. 
+         Specifically, the cache is refreshed entirely in fixed time-step interval, 
+         while partial computation for updating cache is maintained for the intermediate timesteps.
       </h2>
     </div>
   </div>
-</div>
-</div>
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
+      <!-- Your video here -->
+      <!-- <source src="static/videos/banner_video.mp4" type="video/mp4" /> -->
+      <!-- </video> -->
+      <img src="static\images\methods.png" alt="MY ALT TEXT">
+      <h2 class="subtitle has-text-centered">
+        <strong>The pipeline of spatial locality caching.</strong><br>
+        (1) The initialization and refresh process of cache storage using the computed results from SA (Self-Attention), CA (Cross-Attention), and MLP.  <br>
+        (2) The token-wise partial computation logic and the cache update mechanism.  <br>
+        (3) The initialization and update logic for scoring, which is responsible for selecting indices for partial computation.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Gallery</h2>
+  </div>
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/fig1.png" alt="MY ALT TEXT"/>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/fig2.png" alt="MY ALT TEXT"/>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/fig3.png" alt="MY ALT TEXT"/>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/fig4.png" alt="MY ALT TEXT"/>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/fig5.png" alt="MY ALT TEXT"/>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/fig6.png" alt="MY ALT TEXT"/>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/fig7.png" alt="MY ALT TEXT"/>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/fig8.png" alt="MY ALT TEXT"/>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 </section>
 <!-- End image carousel -->
 
@@ -201,57 +266,9 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 <!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <!-- End video carousel -->
 
 
@@ -260,17 +277,6 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
 <!--End paper poster -->
 
 
