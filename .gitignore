@@ -5,3 +5,11 @@
 *.bmp
 *.tiff
 *.ico
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.gif
+**/*.bmp
+**/*.tiff
+**/*.ico
+**/*.pdf
